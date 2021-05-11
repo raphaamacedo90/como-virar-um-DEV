@@ -88,7 +88,7 @@ section{
   margin: auto auto;
   font-family: 'Comfortaa', cursive; ;
   white-space: pre-line;
-  text-align: justify;
+  text-align: inherit;
   color: #fff;
 }
 section h2{
