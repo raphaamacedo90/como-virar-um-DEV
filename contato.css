@@ -123,7 +123,7 @@ nav ul.button:hover li {
 
 .zap{
     list-style-image: url(imagem/zap2.png);
-    margin-right: 40px;        
+    margin-left: 70px;        
 }
 
 .rodape
@@ -203,6 +203,6 @@ nav ul.button:hover li {
 }
 
 .zap{       
-    margin-right:20px;        
+    margin-right:40px;        
 }
 }
