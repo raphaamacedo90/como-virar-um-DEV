@@ -37,13 +37,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 nav ul.menu {
     background: #fff;
     position: absolute;
-    top: 75px;
+    top: 74px;
     left: 0;
     right: 0;
     padding: 15px;
@@ -80,8 +80,7 @@ nav ul.button:hover li {
 
 .logo{
     
-    display: flex;
-    
+    display: flex;    
     color: rgb(224, 139, 224);
     font-family: 'Comfortaa',cursive;    
     font-size: 30px;
@@ -143,7 +142,7 @@ nav ul.button {
 
 .logo {
     font-size: 25px;
-    flex: none;    
+      
 }
 
 }

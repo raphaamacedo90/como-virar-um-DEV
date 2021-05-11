@@ -1,56 +1,95 @@
 @charset "UTF-8";
 
-body{
-  margin:0;
-  padding:0;
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  
+  font-family: Arial, Helvetica, sans-serif;
   background-image: url("imagem/roxo 2.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  position: relative;
-       
+  background-repeat: repeat;  
+  
 }
 
-
-.header {
-  margin: -75px 0 15px;
-  padding: 0;
+nav {
+  background: #fff;
+  color: #fff;
+  padding: 0 15px;
+  height: 75px;
   display: flex;
-  justify-content:space-between; 
   align-items: center;
-}
-.menu{
-  display: flex;
-  margin: 20px 55px;
-  font-size: 20px;
-  font-family:Arial, Helvetica, sans-serif ;
-    
+  justify-content: space-between;
 }
 
-.link{
-  text-decoration: none;
-  color:white;
-  margin-left: 30px;
-  list-style: none; 
-      
+nav ul li {
+  list-style: none;
 }
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(224, 139, 224);
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+}
+
+nav ul.menu {
+  background: #fff;
+  position: absolute;
+  top: 74px;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  text-align: right;
+  display: none;
+  flex-direction: column;
+}
+
+nav ul.menu li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+nav ul.button {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+nav ul.button li {
+  width: 100%;
+  height: 5px;
+  background: rgb(224, 139, 224);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+nav ul.button:hover li {
+  background: rgb(224, 139, 224);
+}
+
 
 .logo{
-    
-  display: flex;
-  color: white;
-  font-family: 'Comfortaa', cursive; ;
-  margin: 30px 55px;
+  
+  display: flex;    
+  color: rgb(224, 139, 224);
+  font-family: 'Comfortaa',cursive;    
   font-size: 30px;
 }
-
 section{
   max-width: 80%;
   margin: auto auto;
   font-family: 'Comfortaa', cursive; ;
   white-space: pre-line;
   text-align: justify;
+  color: #fff;
 }
 section h2{
   font-size: 23px;
@@ -79,8 +118,26 @@ a{
   color: white;
   font-family:Arial, Helvetica, sans-serif ;
 }
-@media screen and (max-width: 350px) {
 
+@media screen and (min-width: 700px) {
+
+  nav ul.menu {
+    display: flex!important;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    padding: 0;
+    background: none;
+}
+
+nav ul.menu li:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+nav ul.button {
+    display: none;
+}
 .menu{
   flex: none; 
   flex-direction: column;
@@ -88,9 +145,7 @@ a{
              
 }
 .logo {
-  font-size: 25px;
-  flex: none;
-  margin: 10px auto;
+  font-size: 25px;  
 }
 section {
   text-align: center;
@@ -99,18 +154,23 @@ section {
    
 }
     
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 700px) {
+  .logo {
+    font-size: 25px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
-.logo{
-  margin: 30px 0 -10px -80px;
-  flex-direction: row-reverse;
 }    
         
 .menu{
              
   font-size: 19px;
   font-family: Arial, Helvetica, sans-serif;
-  margin: auto 20px;                
+  margin: auto;                
 }
 .link{            
   margin-left: 10px;
@@ -121,164 +181,6 @@ section h2{
   }
 .rodape{
                   
-  font: menu; 
+  position: relative;
 }
-
-
-
-    
-*{
-  max-width: 100%;
 }
-
-
-body {
-  
-  margin: 0;
-  padding: 0;      
-}
-
-#sub-menu{
-  width: 35px;
-  height: 30px;
-  margin: 37px -20px 0px 30px;
-  cursor: pointer;
-}
-
-.line{
-  height: 5px;
-  width: 100%;
-  background-color: #b81568;
-  display: block;
-  border-radius: 5px;
-  transition: 0.3s ease;
-}
-#line1{
-  transform: translateY(-4px);
-}
-
-#line3{
-  transform: translateY(4px);
-}
-
-.menu li a:hover{
-  font-weight: bold;
-}
-
-.menu li{
-  padding: 5px;
-  margin: -2px;
-  font-size: 18px;
-}
-.menu{
-  padding: 0;
-  margin: 0 20px;
-  transition: 0.3s ease;
-  display: none;
-  max-width: none;
-}
-
-.menu-bg, #menu-bar{
-  top: 0;
-  right: 5%;
-  position: absolute;
-}
-.menu-bg{
-  z-index: 1;
-  width: 0;
-  height: 0;
-  margin: 30px 0 20px 20px;   
-  transition: 0.3s ease;
-}
-
-#menu-bar{
-  width: 70px;
-  height: 60px;
-  transform: translate(-10%);
-  flex-wrap: wrap;
-  justify-content: center; 
-  margin: 0;
-  padding: 0;    
-}
-
-.change .line{
-  background-color: white;
-}
-
-.change #line1{
-  transform: translateY(4px) rotateZ(-45deg);
-}
-
-.change #line3{
-  transform: translateY(-6px) rotate(45deg);
-}
-
-.change #line2{
-  opacity: 0;
-}
-
-.change{
-  display: block;
-}
-  
-}
-
- 
-        
-
-    
-@media screen and (min-width: 750px) and (max-width: 1024px) {
-    
-.header{
-                    
-  flex-direction: column;            
-                    
-}
-            
-.menu{
-                
-  font-size: 35px;              
-                     
-}
-            
-.logo{
-  font-size: 50px;
-    
-}
-   
-
-            
-}
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
